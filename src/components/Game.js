@@ -1,30 +1,65 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ShowStatus from './ShowStatus';
 import ShowLevel from './ShowLevel';
 import Board from './Board';
 import GameController from './GameControler';
+import Puzzle from '../util/puzzle';
 
 // メインのゲームコンポーネント
 const Game = () => {
+
+  // 盤面数設定
+  const [ puzzle, setPuzzle ] = useState( new Puzzle( 9 ) );
+  console.log( "初期値" );
+  console.log( puzzle.emptyCellNo );
+  console.log( puzzle.totalCount );
+  // 初期データセット
+  const answerDatas = puzzle.answerDatas;
+  // ゲーム初期データセット
+  const [ gameDatas, setGameDatas ] = useState( puzzle.gameDatas );
+  const [ sideSize, setSideSize ] = useState( puzzle.sideSize );
+
+  const handleSubmit = ( event ) => {
+    // 一旦デフォルトのイベントを止める（いるのか分からん）
+    event.preventDefault();
+    // 設定された難易度をセット
+    puzzle.difficult = event.target.difficult.value;
+    // ランダム作成
+    puzzle.generateGameDatas();
+    console.log( puzzle.gameDatas );
+    // セット
+    setPuzzle( puzzle );
+    setGameDatas( puzzle.gameDatas );
+    setSideSize( puzzle.sideSize );
+    console.log( puzzle.isComplete() );
+  };
+
   return (
     <>
       <ShowLevel />        <ShowStatus />
       <table border="0" >
-        <tr>
-          <td>
-            <Board
-              datas={ [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] }
-            />
-          </td>
-          <td>　</td>
-          <td>
-            <Board
-              datas={ [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] }
-            />
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              <Board
+                datas={ gameDatas }
+                sideSize={ sideSize }
+              />
+            </td>
+            <td>　</td>
+            <td>
+              <Board
+                datas={ answerDatas }
+                sideSize={ sideSize }
+              />
+            </td>
+          </tr>
+        </tbody>
       </table>
-      <GameController />
+      <GameController
+        handleSubmit={ handleSubmit }
+        isComplate={ puzzle.isComplete() }
+      />
     </>
   );
 };

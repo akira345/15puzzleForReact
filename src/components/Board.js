@@ -5,16 +5,15 @@ import NumberImage from './NumberImage';
 // ゲーム盤を表示するコンポーネント
 // props.dataに盤の配列を入れる
 // 最大の数字が空白セルになる事
-// 例：props.datas=[1,2,3,4,5,6,7,8,9]
+// 例：props.datas=[0,1,2,3,4,5,6,7,8,9](ただしゼロは使わない)
 const Board = ( props ) => {
   const datas = props.datas;
-  // 空白セル
-  const maxNumber = datas.reduce( ( a, b ) => a > b ? a : b );
+  const sideSize = props.sideSize;
 
   // 表示データ組み立て
   const cell = ( number ) => {
     return (
-      <td>
+      <td key={ number }>
         <NumberImage
           number={ number }
         />
@@ -23,16 +22,17 @@ const Board = ( props ) => {
   };
 
   const boardData = ( datas ) => {
-    const sideSize = Math.sqrt( datas.length );
+
     const board = [];
-    let idx = 0;
+    let idx = 1;
     for ( let i = 0; i < sideSize; ++i ) {
       const rowData = [];
       for ( let j = 0; j < sideSize; j++ ) {
         rowData.push( cell( datas[ idx ] ) );
         ++idx;
       }
-      board.push( <tr>{ rowData }</tr> );
+      // Reactではforで回すときはkeyを付けないといけないらしい
+      board.push( <tr key={ i }>{ rowData }</tr> );
     }
     return (
       board
@@ -41,7 +41,9 @@ const Board = ( props ) => {
 
   return (
     <table border="1">
-      { boardData( datas ) }
+      <tbody>
+        { boardData( datas ) }
+      </tbody>
     </table>
   );
 };

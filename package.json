@@ -1,5 +1,5 @@
 {
-  "name": "puzzle",
+  "name": "15puzzle",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

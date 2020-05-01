@@ -13,7 +13,7 @@ class Puzzle {
     this.gameDatas = [];
     this.moves = [];
     this.shuffleCount = 0;
-    this.emptyNo = this.totalCount;
+    this.emptyCellNo = this.totalCount;
     this.difficult = 'Normal';
     // 初期データセット
     this.generateAnswerDatas();
@@ -39,18 +39,17 @@ class Puzzle {
   };
   /**
    * 正解データを作成します。
-   * 正解データは[1,2,3,…]な感じです
+   * 正解データは[0,1,2,3,…]な感じです(ただし０は使わない)
    */
   generateAnswerDatas () {
-    for ( let i = 0; i < this.totalCount; ++i ) {
-      this.answerDatas.push( i + 1 );
+    for ( let i = 0; i <= this.totalCount; ++i ) {
+      this.answerDatas.push( i );
     }
   }
   /**
    * 問題データを作成します。
    */
   generateGameDatas () {
-    this.GameDatas = this.answerDatas.clone();
     this.setShuffleCount();
     for ( let i = 0; i < this.shuffleCount; ++i ) {
       this.randomMove();
@@ -73,14 +72,14 @@ class Puzzle {
    * 動かせるセルを特定します
    */
   setMove () {
-    this.moves[ 0 ] = this.emptyNo - 1;              // 空白から右のセル
-    this.moves[ 1 ] = this.emptyNo + 1;              // 空白から左のセル
-    this.moves[ 2 ] = this.emptyNo + this.sideSize;  // 空白から下のセル
-    this.moves[ 3 ] = this.emptyNo - this.sideSize;  // 空白から上のセル
+    this.moves[ 0 ] = this.emptyCellNo - 1;              // 空白から左のセル
+    this.moves[ 1 ] = this.emptyCellNo + 1;              // 空白から右のセル
+    this.moves[ 2 ] = this.emptyCellNo + this.sideSize;  // 空白から下のセル
+    this.moves[ 3 ] = this.emptyCellNo - this.sideSize;  // 空白から上のセル
     // 枠外にはみ出たものはゼロにする
-    const tmp = this.emptyNo % this.sideSize;
-    if ( this.moves[ 3 ] < 0 ) this.moves[ 4 ] = 0;
-    if ( this.moves[ 2 ] > this.totalCount ) this.moves[ 3 ] = 0;
+    const tmp = this.emptyCellNo % this.sideSize;
+    if ( this.moves[ 3 ] < 0 ) this.moves[ 3 ] = 0;
+    if ( this.moves[ 2 ] > this.totalCount ) this.moves[ 2 ] = 0;
     if ( tmp === 0 ) this.moves[ 1 ] = 0;
     if ( tmp === 1 ) this.moves[ 0 ] = 0;
   }
@@ -90,8 +89,8 @@ class Puzzle {
   randomMove () {
     this.setMove();
     while ( true ) {
-      // 1~4の乱数生成
-      const tmp = Math.floor( Math.random() * ( 4 ) ) + 1;
+      // 0~3の乱数生成
+      const tmp = Math.floor( Math.random() * 4 );
       if ( this.moves[ tmp ] !== 0 ) {
         this.swapEmptyCell( this.moves[ tmp ] );
         break;
@@ -125,9 +124,9 @@ class Puzzle {
    */
   swapEmptyCell ( moveCellNo ) {
     const tmp = this.gameDatas[ moveCellNo ];
-    this.gameDatas[ moveCellNo ] = this.gameDatas[ this.emptyNo ];
-    this.gameDatas[ this.emptyNo ] = tmp;
-    this.emptyNo = moveCellNo;
+    this.gameDatas[ moveCellNo ] = this.gameDatas[ this.emptyCellNo ];
+    this.gameDatas[ this.emptyCellNo ] = tmp;
+    this.emptyCellNo = moveCellNo;
   }
 }
 

@@ -3,7 +3,6 @@ import React from 'react';
 
 const ShowStatus = ( props ) => {
   const state = ( isComplate ) => {
-    console.log( isComplate );
     if ( isComplate ) return '完成';
     return '未完成';
   };

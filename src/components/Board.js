@@ -1,7 +1,6 @@
 import React from 'react';
 import NumberImage from './NumberImage';
 
-
 // ゲーム盤を表示するコンポーネント
 // props.dataに盤の配列を入れる
 // 最大の数字が空白セルになる事
@@ -11,24 +10,28 @@ const Board = ( props ) => {
   const sideSize = props.sideSize;
 
   // 表示データ組み立て
-  const cell = ( number ) => {
+  const cell = ( datas, idx ) => {
     return (
-      <td key={ number }>
+      // Reactではforで回すときはkeyを付けないといけないらしい。主キーになるそうなのでユニークにしておく
+      <td key={ idx }>
         <NumberImage
-          number={ number }
+          datas={ datas }
+          index={ idx }
+          handleLink={ props.handleLink }
+          moves={ props.moves }
         />
       </td >
     );
   };
 
   const boardData = ( datas ) => {
-
+    // Reactでは必ず閉じタグとペアでないとダメそうなので、安易に文字列組み立て出来ない・・
     const board = [];
     let idx = 1;
     for ( let i = 0; i < sideSize; ++i ) {
       const rowData = [];
-      for ( let j = 0; j < sideSize; j++ ) {
-        rowData.push( cell( datas[ idx ] ) );
+      for ( let j = 0; j < sideSize; ++j ) {
+        rowData.push( cell( datas, idx ) );
         ++idx;
       }
       // Reactではforで回すときはkeyを付けないといけないらしい

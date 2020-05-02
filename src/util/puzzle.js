@@ -63,7 +63,9 @@ class Puzzle {
    * 正解したか判定します。
    */
   isComplete () {
-    if ( this.answerDatas === this.gameDatas ) {
+    // javaScriptには配列の比較演算子が無いらしいので、文字列に変換して比較するらしい
+    if ( this.answerDatas.toString() === this.gameDatas.toString() ) {
+      this.moves = [];
       return true;
     }
     return false;

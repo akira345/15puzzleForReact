@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ShowStatus from './ShowStatus';
 import ShowLevel from './ShowLevel';
 import Board from './Board';
@@ -16,27 +16,36 @@ const Game = () => {
   // 初期データセット
   const answerDatas = puzzle.answerDatas;
   // ゲーム初期データセット
-  const [ gameDatas, setGameDatas ] = useState( puzzle.gameDatas );
-  const [ sideSize, setSideSize ] = useState( puzzle.sideSize );
+  const gameDatas = puzzle.gameDatas;
+  const sideSize = puzzle.sideSize;
 
   const handleSubmit = ( event ) => {
     // 一旦デフォルトのイベントを止める（いるのか分からん）
     event.preventDefault();
-    // 設定された難易度をセット
-    puzzle.difficult = event.target.difficult.value;
-    // ランダム作成
-    puzzle.generateGameDatas();
-    console.log( puzzle.gameDatas );
-    // セット
-    setPuzzle( puzzle );
-    setGameDatas( puzzle.gameDatas );
-    setSideSize( puzzle.sideSize );
-    console.log( puzzle.isComplete() );
+    if ( event.target.submit.value === 'スタート' ) {
+      // 設定された難易度をセット
+      puzzle.difficult = event.target.difficult.value;
+      // ランダム作成
+      puzzle.generateGameDatas();
+      console.log( puzzle.gameDatas );
+      // セット
+      // useStateはイミュータブルじゃないとダメ
+      // とりあえず今はインスタンスをコピーしてお茶を濁す
+      const clone = Object.assign( Object.create( Object.getPrototypeOf( puzzle ) ), puzzle );
+      setPuzzle( clone );
+    } else {
+      // ゲーム初期化
+      setPuzzle( new Puzzle( 9 ) );
+    }
+
   };
 
   return (
     <>
-      <ShowLevel />        <ShowStatus />
+      <ShowLevel
+        difficult={ puzzle.difficult }
+      />        <ShowStatus
+      />
       <table border="0" >
         <tbody>
           <tr>

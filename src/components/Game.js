@@ -45,6 +45,7 @@ const Game = () => {
       <ShowLevel
         difficult={ puzzle.difficult }
       />        <ShowStatus
+        isComplate={ puzzle.isComplete() }
       />
       <table border="0" >
         <tbody>

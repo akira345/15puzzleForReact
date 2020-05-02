@@ -55,7 +55,7 @@ class Puzzle {
       this.randomMove();
     }
     //偶然戻ることがあるのでチェック
-    if ( this.isComplete ) {
+    if ( this.isComplete() ) {
       this.randomMove();
     }
   }
@@ -105,7 +105,7 @@ class Puzzle {
    */
   move ( moveCellNo ) {
     // 完成していたら動かせない
-    if ( this.isComplete ) {
+    if ( this.isComplete() ) {
       return;
     }
     moveCellNo = Math.floor( moveCellNo );

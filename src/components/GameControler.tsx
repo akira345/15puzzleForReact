@@ -1,12 +1,13 @@
 import React, { FC } from "react";
 import Controller from "./Controller";
 
+// ゲームコントローラコンポーネント
 type GameControllerProps = {
   handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void | undefined;
   difficult: string;
   isComplate: boolean;
 };
-// ゲームコントローラコンポーネント
+
 const GameController: FC<GameControllerProps> = ({
   handleSubmit,
   difficult,

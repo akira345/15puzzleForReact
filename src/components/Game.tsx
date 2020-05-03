@@ -11,7 +11,6 @@ const Game: FC = () => {
   const [puzzle, setPuzzle] = useState(new Puzzle(9));
   // 初期データセット
   const answerDatas = puzzle.answerDatas;
-  // ゲーム初期データセット
   const gameDatas = puzzle.gameDatas;
   const sideSize = puzzle.sideSize;
   const difficult = puzzle.difficult;
@@ -25,9 +24,8 @@ const Game: FC = () => {
     if (event.currentTarget.submit.value === "スタート") {
       // 設定された難易度をセット
       puzzle.difficult = event.currentTarget.difficult.value;
-      // ランダム作成
+      // ゲームデータ作成
       puzzle.generateGameDatas();
-
       // 動かせるセルをセット
       puzzle.setMove();
       // セット
@@ -51,7 +49,6 @@ const Game: FC = () => {
   ) => {
     // 一旦デフォルトのイベントを止める（いるのか分からん）
     event.preventDefault();
-
     // 空白セルを動かす
     puzzle.move(moveIndex);
     // セット
@@ -68,15 +65,16 @@ const Game: FC = () => {
       puzzle.setMove();
     }
   };
-  const Style = {
-    border: "none",
-  };
 
   return (
     <>
       <ShowLevel difficult={difficult} />{" "}
       <ShowStatus isComplate={puzzle.isComplete()} />
-      <table style={Style}>
+      <table
+        style={{
+          border: "none",
+        }}
+      >
         <tbody>
           <tr>
             <td>

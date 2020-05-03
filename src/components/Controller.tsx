@@ -30,7 +30,7 @@ const Controller: FC<ControllerProps> = ({ difficult, isComplate }) => {
           value="Normal"
           onChange={handleOnChange}
           checked={_difficult === "Normal"}
-        />{" "}
+        />
         普通
         <input
           type="radio"
@@ -38,7 +38,7 @@ const Controller: FC<ControllerProps> = ({ difficult, isComplate }) => {
           value="Hard"
           onChange={handleOnChange}
           checked={_difficult === "Hard"}
-        />{" "}
+        />
         難しい
         <br />
         <input type="submit" name="submit" value="スタート" />

@@ -42,6 +42,7 @@ class Puzzle {
    * 正解データは[0,1,2,3,…]な感じです(ただし０は使わない)
    */
   generateAnswerDatas () {
+    this.answerDatas = [];
     for ( let i = 0; i <= this.totalCount; ++i ) {
       this.answerDatas.push( i );
     }
@@ -113,10 +114,8 @@ class Puzzle {
     if ( moveCellNo >= 1 && moveCellNo <= this.totalCount ) {
       this.setMove();
       // 4つの動かせるセルのどれかを選択されたか？
-      for ( let i = 0; i < 4; ++i ) {
-        if ( this.moves[ i ] === moveCellNo ) {
-          this.swapEmptyCell( moveCellNo );
-        }
+      if ( this.moves.includes( moveCellNo ) ) {
+        this.swapEmptyCell( moveCellNo );
       }
     }
   }

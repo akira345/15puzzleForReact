@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import ShowStatus from './ShowStatus';
-import ShowLevel from './ShowLevel';
-import Board from './Board';
-import GameController from './GameControler';
-import Puzzle from '../util/puzzle';
+import React, { useState, FC } from "react";
+import ShowStatus from "./ShowStatus";
+import ShowLevel from "./ShowLevel";
+import Board from "./Board";
+import GameController from "./GameControler";
+import Puzzle from "../util/puzzle";
 
 // メインのゲームコンポーネント
-const Game = () => {
-
+const Game: FC = () => {
   // 盤面数設定
-  const [ puzzle, setPuzzle ] = useState( new Puzzle( 9 ) );
+  const [puzzle, setPuzzle] = useState(new Puzzle(9));
   // 初期データセット
   const answerDatas = puzzle.answerDatas;
   // ゲーム初期データセット
@@ -18,12 +17,14 @@ const Game = () => {
   const difficult = puzzle.difficult;
 
   // スタートボタンハンドラ
-  const handleSubmit = ( event ) => {
+  // ここのAnyをどうにかしたいが出来るのか？
+  const handleSubmit = (event: any) => {
     // 一旦デフォルトのイベントを止める（いるのか分からん）
     event.preventDefault();
-    if ( event.target.submit.value === 'スタート' ) {
+
+    if (event.currentTarget.submit.value === "スタート") {
       // 設定された難易度をセット
-      puzzle.difficult = event.target.difficult.value;
+      puzzle.difficult = event.currentTarget.difficult.value;
       // ランダム作成
       puzzle.generateGameDatas();
 
@@ -32,68 +33,76 @@ const Game = () => {
       // セット
       // useStateはイミュータブルじゃないとダメ
       // とりあえず今はインスタンスをコピーしてお茶を濁す
-      const clone = Object.assign( Object.create( Object.getPrototypeOf( puzzle ) ), puzzle );
-      setPuzzle( clone );
+      const clone = Object.assign(
+        Object.create(Object.getPrototypeOf(puzzle)),
+        puzzle
+      );
+      setPuzzle(clone);
     } else {
       // ギブアップ
       // ゲーム初期化
-      setPuzzle( new Puzzle( 9 ) );
+      setPuzzle(new Puzzle(9));
     }
-
   };
   // 空白セルクリックハンドラ
-  const handleLink = ( event, moveIndex ) => {
+  const handleLink = (
+    event: React.MouseEvent<HTMLImageElement, MouseEvent>,
+    moveIndex: number
+  ) => {
     // 一旦デフォルトのイベントを止める（いるのか分からん）
     event.preventDefault();
 
     // 空白セルを動かす
-    puzzle.move( moveIndex );
+    puzzle.move(moveIndex);
     // セット
     // useStateはイミュータブルじゃないとダメ
     // とりあえず今はインスタンスをコピーしてお茶を濁す
-    const clone = Object.assign( Object.create( Object.getPrototypeOf( puzzle ) ), puzzle );
-    setPuzzle( clone );
+    const clone = Object.assign(
+      Object.create(Object.getPrototypeOf(puzzle)),
+      puzzle
+    );
+    setPuzzle(clone);
     // ゲームがクリアされていなければ、次の動かせるセルをセットする
-    if ( !puzzle.isComplete() ) {
+    if (!puzzle.isComplete()) {
       // 動かせるセルをセット
       puzzle.setMove();
     }
   };
+  const Style = {
+    border: "none",
+  };
 
   return (
     <>
-      <ShowLevel
-        difficult={ difficult }
-      />        <ShowStatus
-        isComplate={ puzzle.isComplete() }
-      />
-      <table border="0" >
+      <ShowLevel difficult={difficult} />{" "}
+      <ShowStatus isComplate={puzzle.isComplete()} />
+      <table style={Style}>
         <tbody>
           <tr>
             <td>
               <Board
-                datas={ gameDatas }
-                sideSize={ sideSize }
-                moves={ puzzle.moves }
-                handleLink={ handleLink }
+                datas={gameDatas}
+                sideSize={sideSize}
+                moves={puzzle.moves}
+                handleLink={handleLink}
               />
             </td>
             <td>　</td>
             <td>
               <Board
-                datas={ answerDatas }
-                sideSize={ sideSize }
-                moves={ [] }
-                handleLink={ () => { } }
+                datas={answerDatas}
+                sideSize={sideSize}
+                moves={[]}
+                handleLink={() => {}}
               />
             </td>
           </tr>
         </tbody>
       </table>
       <GameController
-        difficult={ difficult }
-        handleSubmit={ handleSubmit }
-        isComplate={ puzzle.isComplete() }
+        difficult={difficult}
+        handleSubmit={handleSubmit}
+        isComplate={puzzle.isComplete()}
       />
     </>
   );

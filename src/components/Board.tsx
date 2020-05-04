@@ -42,7 +42,6 @@ const Cell: FC<CellProps> = ({ datas, idx, handleLink, moves }) => {
         borderColor: "#000000",
         borderStyle: "solid",
       }}
-      key={idx}
     >
       <NumberImage
         datas={datas}

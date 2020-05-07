@@ -6,8 +6,13 @@ type ControllerProps = {
   onChange: (difficult: string) => void;
 };
 // コントローラ表示
-const Controller: FC<ControllerProps> = ({ difficult, isComplate , onChange}) => {
+const Controller: FC<ControllerProps> = ({
+  difficult,
+  isComplate,
+  onChange,
+}) => {
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // ラジオボタンが変更されたイベントを上位へ通知する
     onChange(event.target.value);
   };
 

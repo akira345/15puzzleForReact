@@ -19,10 +19,11 @@ const useForceRender = () => {
 const Game: FC = () => {
   const forceRender = useForceRender();
   // 盤面数設定
-  // 難易度の選択状態
-
+  // useRef()はコンポーネントを再描画したときでも、常に同じ参照を指すことが保証されている。
+  // useRefで渡した引数は初期値で、currentプロパティに保持される。
   const puzzleRef = useRef<Puzzle>(new Puzzle(9));
   const puzzle = puzzleRef.current;
+  // 難易度の選択状態
   const [difficult, setDifficult] = useState(puzzle.difficult);
   // 初期データセット
   const answerDatas = puzzle.answerDatas;
@@ -30,11 +31,12 @@ const Game: FC = () => {
   const sideSize = puzzle.sideSize;
 
   const handleDifficultChange = (difficult: string) => {
+    // ラジオボタンが変更されたイベントを基に難易度をセットする
     setDifficult(difficult);
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    // 一旦デフォルトのイベントを止める（いるのか分からん）
+    // 一旦デフォルトのイベントを止める
     event.preventDefault();
 
     if (puzzle.isComplete()) {
@@ -56,7 +58,9 @@ const Game: FC = () => {
     event: React.MouseEvent<HTMLImageElement, MouseEvent>,
     moveIndex: number
   ) => {
-    // 一旦デフォルトのイベントを止める（いるのか分からん）
+    // 一旦デフォルトのイベントを止める
+    // これはブラウザのデフォルトイベントを止めるのに必要らしい。
+    // 参考：https://qiita.com/tochiji/items/4e9e64cabc0a1cd7a1ae
     event.preventDefault();
     // 空白セルを動かす
     puzzle.move(moveIndex);

@@ -78,8 +78,6 @@ class Puzzle {
       case "Hard":
         this._shuffleCount = this._totalCount * 10;
         break;
-      default:
-        this._shuffleCount = this._totalCount;
     }
   }
   /**

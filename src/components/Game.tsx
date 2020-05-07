@@ -50,6 +50,9 @@ const Game: FC = () => {
       // ギブアップ
       // ゲーム初期化
       puzzleRef.current = new Puzzle(9);
+      // ゲーム初期化時難易度をデフォルトにする。
+      //（クラスのコンストラクタでセットしていても、useStateはキャッシュするので)
+      setDifficult("Normal");
     }
     forceRender();
   };

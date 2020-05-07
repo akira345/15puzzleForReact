@@ -19,38 +19,54 @@ const Controller: FC<ControllerProps> = ({
   if (isComplate) {
     return (
       <>
-        <input
-          type="radio"
-          name="difficult"
-          value="Easy"
-          onChange={handleOnChange}
-          checked={difficult === "Easy"}
-        />
-        やさしい
-        <input
-          type="radio"
-          name="difficult"
-          value="Normal"
-          onChange={handleOnChange}
-          checked={difficult === "Normal"}
-        />
-        普通
-        <input
-          type="radio"
-          name="difficult"
-          value="Hard"
-          onChange={handleOnChange}
-          checked={difficult === "Hard"}
-        />
-        難しい
+        <label>
+          <input
+            type="radio"
+            name="difficult"
+            value="Easy"
+            onChange={handleOnChange}
+            checked={difficult === "Easy"}
+          />
+          やさしい
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="difficult"
+            value="Normal"
+            onChange={handleOnChange}
+            checked={difficult === "Normal"}
+          />
+          普通
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="difficult"
+            value="Hard"
+            onChange={handleOnChange}
+            checked={difficult === "Hard"}
+          />
+          難しい
+        </label>
         <br />
-        <input type="submit" name="submit" value="スタート" />
+        <input
+          type="submit"
+          name="submit"
+          value="スタート"
+          data-testid="control-submit"
+        />
       </>
     );
   } else {
     return (
       <>
-        <input type="submit" name="submit" value="ギブアップ" />
+        <input
+          type="submit"
+          name="submit"
+          value="ギブアップ"
+          data-testid="control-submit"
+        />
       </>
     );
   }

@@ -1,0 +1,1064 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`15パズルテスト ゲームスタート 1`] = `
+<DocumentFragment>
+  やさしい 未完成
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <table
+            style="border-width: 1px; border-color: #000000; border-style: solid;"
+          >
+            <tbody>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="1"
+                    src="/gif/1.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="2"
+                    src="/gif/2.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="3"
+                    src="/gif/3.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="4"
+                    src="/gif/4.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="5"
+                    src="/gif/5.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="9"
+                    src="/gif/9.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="7"
+                    src="/gif/7.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="8"
+                    src="/gif/8.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="6"
+                    src="/gif/6.gif"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+        <td>
+          　
+        </td>
+        <td>
+          <table
+            style="border-width: 1px; border-color: #000000; border-style: solid;"
+          >
+            <tbody>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="1"
+                    src="/gif/1.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="2"
+                    src="/gif/2.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="3"
+                    src="/gif/3.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="4"
+                    src="/gif/4.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="5"
+                    src="/gif/5.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="6"
+                    src="/gif/6.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="7"
+                    src="/gif/7.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="8"
+                    src="/gif/8.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="9"
+                    src="/gif/9.gif"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <form
+    data-testid="control-form"
+  >
+    <input
+      data-testid="control-submit"
+      name="submit"
+      type="submit"
+      value="ギブアップ"
+    />
+  </form>
+</DocumentFragment>
+`;
+
+exports[`15パズルテスト ゲームスタート後ギブアップ 1`] = `
+<DocumentFragment>
+  普通 完成
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <table
+            style="border-width: 1px; border-color: #000000; border-style: solid;"
+          >
+            <tbody>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="1"
+                    src="/gif/1.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="2"
+                    src="/gif/2.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="3"
+                    src="/gif/3.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="4"
+                    src="/gif/4.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="5"
+                    src="/gif/5.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="6"
+                    src="/gif/6.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="7"
+                    src="/gif/7.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="8"
+                    src="/gif/8.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="9"
+                    src="/gif/9.gif"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+        <td>
+          　
+        </td>
+        <td>
+          <table
+            style="border-width: 1px; border-color: #000000; border-style: solid;"
+          >
+            <tbody>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="1"
+                    src="/gif/1.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="2"
+                    src="/gif/2.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="3"
+                    src="/gif/3.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="4"
+                    src="/gif/4.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="5"
+                    src="/gif/5.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="6"
+                    src="/gif/6.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="7"
+                    src="/gif/7.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="8"
+                    src="/gif/8.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="9"
+                    src="/gif/9.gif"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <form
+    data-testid="control-form"
+  >
+    <label>
+      <input
+        name="difficult"
+        type="radio"
+        value="Easy"
+      />
+      やさしい
+    </label>
+    <label>
+      <input
+        checked=""
+        name="difficult"
+        type="radio"
+        value="Normal"
+      />
+      普通
+    </label>
+    <label>
+      <input
+        name="difficult"
+        type="radio"
+        value="Hard"
+      />
+      難しい
+    </label>
+    <br />
+    <input
+      data-testid="control-submit"
+      name="submit"
+      type="submit"
+      value="スタート"
+    />
+  </form>
+</DocumentFragment>
+`;
+
+exports[`15パズルテスト セルを動かす(完成) 1`] = `
+<DocumentFragment>
+  やさしい 完成
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <table
+            style="border-width: 1px; border-color: #000000; border-style: solid;"
+          >
+            <tbody>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="1"
+                    src="/gif/1.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="2"
+                    src="/gif/2.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="3"
+                    src="/gif/3.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="4"
+                    src="/gif/4.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="5"
+                    src="/gif/5.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="6"
+                    src="/gif/6.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="7"
+                    src="/gif/7.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="8"
+                    src="/gif/8.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="9"
+                    src="/gif/9.gif"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+        <td>
+          　
+        </td>
+        <td>
+          <table
+            style="border-width: 1px; border-color: #000000; border-style: solid;"
+          >
+            <tbody>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="1"
+                    src="/gif/1.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="2"
+                    src="/gif/2.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="3"
+                    src="/gif/3.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="4"
+                    src="/gif/4.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="5"
+                    src="/gif/5.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="6"
+                    src="/gif/6.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="7"
+                    src="/gif/7.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="8"
+                    src="/gif/8.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="9"
+                    src="/gif/9.gif"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <form
+    data-testid="control-form"
+  >
+    <label>
+      <input
+        checked=""
+        name="difficult"
+        type="radio"
+        value="Easy"
+      />
+      やさしい
+    </label>
+    <label>
+      <input
+        name="difficult"
+        type="radio"
+        value="Normal"
+      />
+      普通
+    </label>
+    <label>
+      <input
+        name="difficult"
+        type="radio"
+        value="Hard"
+      />
+      難しい
+    </label>
+    <br />
+    <input
+      data-testid="control-submit"
+      name="submit"
+      type="submit"
+      value="スタート"
+    />
+  </form>
+</DocumentFragment>
+`;
+
+exports[`15パズルテスト セルを動かす(未完成) 1`] = `
+<DocumentFragment>
+  やさしい 未完成
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <table
+            style="border-width: 1px; border-color: #000000; border-style: solid;"
+          >
+            <tbody>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="1"
+                    src="/gif/1.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="2"
+                    src="/gif/2.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="9"
+                    src="/gif/9.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="4"
+                    src="/gif/4.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="5"
+                    src="/gif/5.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="3"
+                    src="/gif/3.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="7"
+                    src="/gif/7.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="8"
+                    src="/gif/8.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="6"
+                    src="/gif/6.gif"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+        <td>
+          　
+        </td>
+        <td>
+          <table
+            style="border-width: 1px; border-color: #000000; border-style: solid;"
+          >
+            <tbody>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="1"
+                    src="/gif/1.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="2"
+                    src="/gif/2.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="3"
+                    src="/gif/3.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="4"
+                    src="/gif/4.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="5"
+                    src="/gif/5.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="6"
+                    src="/gif/6.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="7"
+                    src="/gif/7.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="8"
+                    src="/gif/8.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="9"
+                    src="/gif/9.gif"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <form
+    data-testid="control-form"
+  >
+    <input
+      data-testid="control-submit"
+      name="submit"
+      type="submit"
+      value="ギブアップ"
+    />
+  </form>
+</DocumentFragment>
+`;
+
+exports[`15パズルテスト 初期画面テスト 1`] = `
+<DocumentFragment>
+  普通 完成
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <table
+            style="border-width: 1px; border-color: #000000; border-style: solid;"
+          >
+            <tbody>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="1"
+                    src="/gif/1.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="2"
+                    src="/gif/2.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="3"
+                    src="/gif/3.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="4"
+                    src="/gif/4.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="5"
+                    src="/gif/5.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="6"
+                    src="/gif/6.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="7"
+                    src="/gif/7.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="8"
+                    src="/gif/8.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="9"
+                    src="/gif/9.gif"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+        <td>
+          　
+        </td>
+        <td>
+          <table
+            style="border-width: 1px; border-color: #000000; border-style: solid;"
+          >
+            <tbody>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="1"
+                    src="/gif/1.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="2"
+                    src="/gif/2.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="3"
+                    src="/gif/3.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="4"
+                    src="/gif/4.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="5"
+                    src="/gif/5.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="6"
+                    src="/gif/6.gif"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="7"
+                    src="/gif/7.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="8"
+                    src="/gif/8.gif"
+                  />
+                </td>
+                <td
+                  style="border-width: 1px; border-color: #000000; border-style: solid;"
+                >
+                  <img
+                    alt="9"
+                    src="/gif/9.gif"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <form
+    data-testid="control-form"
+  >
+    <label>
+      <input
+        name="difficult"
+        type="radio"
+        value="Easy"
+      />
+      やさしい
+    </label>
+    <label>
+      <input
+        checked=""
+        name="difficult"
+        type="radio"
+        value="Normal"
+      />
+      普通
+    </label>
+    <label>
+      <input
+        name="difficult"
+        type="radio"
+        value="Hard"
+      />
+      難しい
+    </label>
+    <br />
+    <input
+      data-testid="control-submit"
+      name="submit"
+      type="submit"
+      value="スタート"
+    />
+  </form>
+</DocumentFragment>
+`;

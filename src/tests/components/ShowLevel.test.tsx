@@ -9,7 +9,7 @@ describe("ShowLevelのテスト", () => {
     render(<ShowLevel difficult={"Easy"} />);
     expect(screen.getByText("やさしい")).toBeInTheDocument();
   });
-  it("ふつうと表示するか？", () => {
+  it("普通と表示するか？", () => {
     // レンダリングする
     render(<ShowLevel difficult={"Normal"} />);
     expect(screen.getByText("普通")).toBeInTheDocument();

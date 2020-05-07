@@ -13,8 +13,6 @@ const ShowLevel: FC<ShowLevelProps> = ({ difficult }) => {
         return "普通";
       case "Hard":
         return "難しい";
-      default:
-        return;
     }
   };
   return <>{level(difficult)}</>;

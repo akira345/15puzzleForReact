@@ -16,8 +16,12 @@ const GameController: FC<GameControllerProps> = ({
   onDifficultChange,
 }) => {
   return (
-    <form onSubmit={handleSubmit}>
-      <Controller difficult={difficult} isComplate={isComplate} onChange={onDifficultChange}/>
+    <form onSubmit={handleSubmit} data-testid="control-form">
+      <Controller
+        difficult={difficult}
+        isComplate={isComplate}
+        onChange={onDifficultChange}
+      />
     </form>
   );
 };

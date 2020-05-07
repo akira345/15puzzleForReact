@@ -50,13 +50,23 @@ const Controller: FC<ControllerProps> = ({
           難しい
         </label>
         <br />
-        <input type="submit" name="submit" value="スタート" />
+        <input
+          type="submit"
+          name="submit"
+          value="スタート"
+          data-testid="control-submit"
+        />
       </>
     );
   } else {
     return (
       <>
-        <input type="submit" name="submit" value="ギブアップ" />
+        <input
+          type="submit"
+          name="submit"
+          value="ギブアップ"
+          data-testid="control-submit"
+        />
       </>
     );
   }

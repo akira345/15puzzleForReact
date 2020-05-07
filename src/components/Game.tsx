@@ -19,23 +19,26 @@ const useForceRender = () => {
 const Game: FC = () => {
   const forceRender = useForceRender();
   // 盤面数設定
+  // 難易度の選択状態
+  const [difficult, setDifficult] = useState(puzzle.difficult);
   const puzzleRef = useRef<Puzzle>(new Puzzle(9));
   const puzzle = puzzleRef.current;
   // 初期データセット
   const answerDatas = puzzle.answerDatas;
   const gameDatas = puzzle.gameDatas;
   const sideSize = puzzle.sideSize;
-  const difficult = puzzle.difficult;
 
-  // スタートボタンハンドラ
-  // ここのAnyをどうにかしたいが出来るのか？
-  const handleSubmit = (event: any) => {
+  const handleDifficultChange = (difficult: string) => {
+    setDifficult(difficult);
+  }
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     // 一旦デフォルトのイベントを止める（いるのか分からん）
     event.preventDefault();
 
-    if (event.currentTarget.submit.value === "スタート") {
+    if (puzzle.isComplete()) {
       // 設定された難易度をセット
-      puzzle.difficult = event.currentTarget.difficult.value;
+      puzzle.difficult = difficult;
       // ゲームデータ作成
       puzzle.generateGameDatas();
       // 動かせるセルをセット
@@ -66,7 +69,7 @@ const Game: FC = () => {
 
   return (
     <>
-      <ShowLevel difficult={difficult} />{" "}
+      <ShowLevel difficult={puzzle.difficult} />{" "}
       <ShowStatus isComplate={puzzle.isComplete()} />
       <table
         style={{
@@ -99,6 +102,7 @@ const Game: FC = () => {
         difficult={difficult}
         handleSubmit={handleSubmit}
         isComplate={puzzle.isComplete()}
+        onDifficultChange={handleDifficultChange}
       />
     </>
   );

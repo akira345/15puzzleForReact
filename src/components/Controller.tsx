@@ -1,16 +1,14 @@
-import React, { useState, FC } from "react";
+import React, { FC } from "react";
 
 type ControllerProps = {
   difficult: string;
   isComplate: boolean;
+  onChange: (difficult: string) => void;
 };
 // コントローラ表示
-const Controller: FC<ControllerProps> = ({ difficult, isComplate }) => {
-  // ラジオボタンのチェックボックスを変更できるようにする
-  // こうしないとReactではイベントをトラップされているので変更できなくなる
-  const [_difficult, setDifficult] = useState(difficult);
+const Controller: FC<ControllerProps> = ({ difficult, isComplate , onChange}) => {
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setDifficult(event.target.value);
+    onChange(event.target.value);
   };
 
   if (isComplate) {
@@ -21,7 +19,7 @@ const Controller: FC<ControllerProps> = ({ difficult, isComplate }) => {
           name="difficult"
           value="Easy"
           onChange={handleOnChange}
-          checked={_difficult === "Easy"}
+          checked={difficult === "Easy"}
         />
         やさしい
         <input
@@ -29,7 +27,7 @@ const Controller: FC<ControllerProps> = ({ difficult, isComplate }) => {
           name="difficult"
           value="Normal"
           onChange={handleOnChange}
-          checked={_difficult === "Normal"}
+          checked={difficult === "Normal"}
         />
         普通
         <input
@@ -37,7 +35,7 @@ const Controller: FC<ControllerProps> = ({ difficult, isComplate }) => {
           name="difficult"
           value="Hard"
           onChange={handleOnChange}
-          checked={_difficult === "Hard"}
+          checked={difficult === "Hard"}
         />
         難しい
         <br />

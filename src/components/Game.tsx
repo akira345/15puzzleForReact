@@ -13,16 +13,17 @@ const useForceRender = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, set] = useState({});
   return () => set({});
-}
+};
 
 // メインのゲームコンポーネント
 const Game: FC = () => {
   const forceRender = useForceRender();
   // 盤面数設定
   // 難易度の選択状態
-  const [difficult, setDifficult] = useState(puzzle.difficult);
+
   const puzzleRef = useRef<Puzzle>(new Puzzle(9));
   const puzzle = puzzleRef.current;
+  const [difficult, setDifficult] = useState(puzzle.difficult);
   // 初期データセット
   const answerDatas = puzzle.answerDatas;
   const gameDatas = puzzle.gameDatas;
@@ -30,7 +31,7 @@ const Game: FC = () => {
 
   const handleDifficultChange = (difficult: string) => {
     setDifficult(difficult);
-  }
+  };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     // 一旦デフォルトのイベントを止める（いるのか分からん）

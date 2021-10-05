@@ -1,26 +1,18 @@
 module.exports = {
-  "roots": [
-    "<rootDir>/src"
-  ],
-  "moduleFileExtensions": [
-    "ts",
-    "js",
-    "tsx",
-    "jsx"
-  ],
-  "transform": {
-    "^.+\\.(ts|tsx|jsx|js)$": "ts-jest"
+  roots: ["<rootDir>/src"],
+  moduleFileExtensions: ["ts", "js", "tsx", "jsx"],
+  transform: {
+    "^.+\\.(ts|tsx|jsx|js)$": "ts-jest",
   },
-  "globals": {
+  globals: {
     "ts-jest": {
-      "tsconfig": "tsconfig.json"
-    }
+      tsconfig: "tsconfig.json",
+    },
   },
-  "testMatch": [
-    "**/tests/**/*.(spec|test).+(ts|tsx|js)"
-  ],
-  "moduleNameMapper": {
+  testMatch: ["**/tests/**/*.(spec|test).+(ts|tsx|js)"],
+  moduleNameMapper: {
     "^components/(.+)": "<rootDir>/src/components/$1",
-    "\\.(css|scss)$": "<rootDir>/node_modules/jest-css-modules"
+    "\\.(css|scss)$": "<rootDir>/node_modules/jest-css-modules",
   },
+  testEnvironment: "jsdom",
 };

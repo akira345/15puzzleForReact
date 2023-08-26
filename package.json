@@ -41,7 +41,7 @@
     ]
   },
   "devDependencies": {
-    "jest-environment-jsdom": "29.6.3",
+    "jest-environment-jsdom": "29.6.4",
     "jest-mock-random": "1.1.1"
   }
 }

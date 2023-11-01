@@ -1,7 +1,7 @@
 // パズルクラステスト
 
 import Puzzle from "../../../util/puzzle";
-const { mockRandom, resetMockRandom } = require("jest-mock-random");
+import { mockRandom, resetMockRandom } from "jest-mock-random";
 
 describe("setMoveのテスト", () => {
   it("動かせるセルの特定", () => {

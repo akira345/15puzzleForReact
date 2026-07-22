@@ -14,7 +14,7 @@
     "jest": "30.4.2",
     "jest-css-modules": "2.1.0",
     "react": "19.2.7",
-    "react-dom": "19.2.7",
+    "react-dom": "19.2.8",
     "react-scripts": "5.0.1",
     "ts-jest": "29.4.12",
     "typescript": "5.9.3"
